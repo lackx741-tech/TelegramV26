@@ -1,68 +1,95 @@
 {
-	"BOT_TOKEN": "000000000000:AAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-	"BOT_USERNAME": "animebot_cool_username",
-	"ADMIN": {
-		"id": 123456789000000000000,
-		"username": "admin_username"
-	},
-	"CHATS_LIST": [
-		{
-			"id": -123456789000000000000,
-			"name": "TEST CHAT",
-			"enabled": true,
-			"welcome": {
-				"type": "text",
-				"message": "Привет, __USERNAME__!\nМожешь кинуть ссылку на свой список аниме?"
-			}
-		},
-		{
-			"id": -123456789000000000001,
-			"name": "MAIN CHAT",
-			"enabled": false
-		},
-		{
-			"id": -123456789000000000002,
-			"name": "OTHER CHAT",
-			"enabled": false,
-			"welcome": {
-				"type": "gif",
-				"message": {
-					"file_id": "AAAAAAAAAAAAAAAAA-BBBBBBBBBBBBBBBBBBBBB-CCCCCCCCCCCCC-123456789",
-					"caption": "Добро пожаловать в наш клуб! Во что играешь?"
-				}
-			}
-		},
-		{
-			"id": -123456789000000000003,
-			"name": "4TH CHAT",
-			"enabled": true,
-			"welcome": {
-				"type": "gif",
-				"message": {
-					"filename": "./resources/abcdef123456790000000000000000000000.mp4",
-					"caption": "Добро пожаловать в наш клуб! Во что играешь?"
-				}
-			}
-		}
-	],
-	"PRIVILEGE_LIST": [
-		"user1",
-		"user2",
-		"user3 и т.д."
-	],
-	"BLACKLIST": [
-		"bad_user1",
-		"bad_user2",
-		6900000000
-	],
-	"SPECIAL_STICKERS_SET": "your_stickers_set_name",
-	"SPECIAL_PHRASE": {
-		"regexp": "^hello\\sthere!$",
-		"sticker": "AAAAAAAAAAAAAAAAA-BBBBBBBBBBBBBBBBBBBBB-CCCCCCCCCCCCC-123456789",
-		"gif": "AAAAAAAAAAAAAAAAA-BBBBBBBBBBBBBBBBBBBBB-CCCCCCCCCCCCC-123456789"
-	},
-	"LOCAL_BOT_API_SERVER": {
-		"hostname": "localhost",
-		"port": 8081
-	}
+  "BOT_TOKEN": "000000000000:AAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+  "BOT_USERNAME": "socialbot_portal",
+  "ADMIN": {
+    "id": 123456789,
+    "username": "founder_portal"
+  },
+  "PROJECT_NAME": "Portal Protocol",
+  "PROJECT_TICKER": "$PORTAL",
+  "PROJECT_TAGLINE": "memes, markets, and community-powered momentum",
+  "OFFICIAL_LINKS": {
+    "website": "https://portalprotocol.xyz",
+    "presale": "https://portalprotocol.xyz/presale",
+    "docs": "https://docs.portalprotocol.xyz",
+    "twitter": "https://x.com/portalprotocol",
+    "telegram": "https://t.me/portalprotocol",
+    "discord": "https://discord.gg/portalprotocol",
+    "support": "https://portalprotocol.xyz/support",
+    "audit": "https://portalprotocol.xyz/audit",
+    "dexscreener": "https://dexscreener.com",
+    "coinmarketcap": "https://coinmarketcap.com",
+    "coingecko": "https://coingecko.com"
+  },
+  "PRESALE": {
+    "status": "LIVE",
+    "network": "Ethereum",
+    "launch_date": "TBA",
+    "claim_date": "TBA",
+    "vesting": "Details announced in official docs and pinned messages.",
+    "contract_address": "TBA",
+    "minimum_buy": "0.1 ETH",
+    "maximum_buy": "5 ETH",
+    "accepted_assets": "ETH",
+    "kya": "Meme-first, utility next, community always."
+  },
+  "TOKENOMICS": {
+    "supply": "1,000,000,000 $PORTAL",
+    "presale": "40%",
+    "liquidity": "20%",
+    "community": "15%",
+    "marketing": "10%",
+    "ecosystem": "10%",
+    "team": "5%"
+  },
+  "CHATS_LIST": [
+    {
+      "id": -1001111111111,
+      "name": "PORTAL ANNOUNCEMENTS",
+      "enabled": true,
+      "welcome": {
+        "type": "text",
+        "message": "Welcome, __USERNAME__!\n\n🚀 <b>${PROJECT_NAME}</b> is where memes meet Web3 conviction.\n\nOfficial links:\n• Website: ${OFFICIAL_LINKS.website}\n• Presale: ${OFFICIAL_LINKS.presale}\n• Docs: ${OFFICIAL_LINKS.docs}\n• X: ${OFFICIAL_LINKS.twitter}\n• Support: ${OFFICIAL_LINKS.support}\n\nSecurity:\n• Admins will NEVER DM you first.\n• Never share your seed phrase or private key.\n• Only use pinned and official links.\n• Never send funds to wallets posted in chat.\n\nUse /links, /security, /whitelist, /howtobuy, /tokenomics, /roadmap, /memes"
+      }
+    },
+    {
+      "id": -1002222222222,
+      "name": "PORTAL COMMUNITY",
+      "enabled": true,
+      "welcome": {
+        "type": "text",
+        "message": "Yo __USERNAME__ — welcome to <b>${PROJECT_NAME}</b> 🔥\n\nThis is the main meme bunker for ${PROJECT_TICKER}.\n\nRead pinned before you ape:\n• official presale link\n• chain + accepted asset\n• claim / vesting updates\n• scam warning\n\nRemember:\n• Admins never DM first\n• No seed phrases, ever\n• Verify every link twice\n\nCommands: /help /faq /links /security /hype /memes"
+      }
+    },
+    {
+      "id": -1003333333333,
+      "name": "PORTAL WHITELIST",
+      "enabled": true,
+      "welcome": {
+        "type": "text",
+        "message": "Welcome, __USERNAME__!\n\n🎟 <b>${PROJECT_NAME} Whitelist Lounge</b>\n\nWhitelist / presale quick facts:\n• Status: ${PRESALE.status}\n• Network: ${PRESALE.network}\n• Min buy: ${PRESALE.minimum_buy}\n• Max buy: ${PRESALE.maximum_buy}\n• Accepted asset: ${PRESALE.accepted_assets}\n\nOnly trust the pinned message and official links. Use /whitelist and /howtobuy for step-by-step guidance."
+      }
+    }
+  ],
+  "PRIVILEGE_LIST": [
+    "founder_portal",
+    "portal_admin",
+    "portal_mod",
+    "portal_support"
+  ],
+  "BLACKLIST": [
+    "fake_support_portal",
+    "portal_airdrop_scam",
+    999999999
+  ],
+  "SPECIAL_STICKERS_SET": "portal_memes_by_portalteam",
+  "SPECIAL_PHRASE": {
+    "regexp": "^(wen token|wen launch|wen moon|gm|send memes)$",
+    "sticker": "AAAAAAAAAAAAAAAAA-BBBBBBBBBBBBBBBBBBBBB-CCCCCCCCCCCCC-123456789",
+    "gif": "AAAAAAAAAAAAAAAAA-BBBBBBBBBBBBBBBBBBBBB-CCCCCCCCCCCCC-123456789"
+  },
+  "LOCAL_BOT_API_SERVER": {
+    "hostname": "localhost",
+    "port": 8081
+  }
 }

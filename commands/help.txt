@@ -1,6 +1,1 @@
-Что я умею?
-
-• Я работаю только в общих групповых чатах, куда меня добавили по специальному приглашению. В ЛС – только информация о командах.
-• Обрабатывать ссылки на ресурсы, заменяя их контентом, находящимся по этим ссылкам – /aboutpicker@${BOT_USERNAME} и /aboutlist@${BOT_USERNAME}.
-• Скрывать спойлеры. Подробнее о команде – /aboutspoiler@${BOT_USERNAME}.
-• Приветствовать новых пользователей.
+What can I do?\n\n🚀 I am the social command center for <b>${PROJECT_NAME}</b>.\n\nCore features:\n• Unfurl supported social links directly into Telegram media\n• Welcome new community members with official onboarding\n• Share official project info fast\n• Help reduce scam risk with security guidance\n• Keep the timeline fun with meme / hype commands\n\nUseful commands:\n• /links – all official links\n• /security – anti-scam checklist\n• /whitelist – whitelist and presale info\n• /howtobuy – step-by-step participation guide\n• /contract – contract status and verification reminder\n• /tokenomics – token allocation snapshot\n• /roadmap – key milestones\n• /socials – social and community hubs\n• /faq – fast answers\n• /memes – community meme manifesto\n• /hype – ready-to-post social copy\n\nModeration helpers:\n• /spoiler – re-post bot media as spoiler\n• /delete – remove your bot-generated repost\n\nSecurity reminder:\n• Admins will NEVER DM you first\n• Never share your seed phrase\n• Use only pinned and official links\n

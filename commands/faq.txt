@@ -1,0 +1,1 @@
+<b>${PROJECT_NAME} FAQ</b>\n\nQ: Where is the presale?\nA: ${OFFICIAL_LINKS.presale}\n\nQ: Which network?\nA: ${PRESALE.network}\n\nQ: What asset do I need?\nA: ${PRESALE.accepted_assets}\n\nQ: Where are docs?\nA: ${OFFICIAL_LINKS.docs}\n\nQ: Is the contract live?\nA: Use /contract and check pinned updates\n\nQ: How do I stay safe?\nA: Use /security and never trust DMs\n

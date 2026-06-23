@@ -1,0 +1,1 @@
+<b>${PROJECT_NAME} Socials</b>\n\n🐦 X: ${OFFICIAL_LINKS.twitter}\n💬 Telegram: ${OFFICIAL_LINKS.telegram}\n🎮 Discord: ${OFFICIAL_LINKS.discord}\n🌐 Website: ${OFFICIAL_LINKS.website}\n📘 Docs: ${OFFICIAL_LINKS.docs}\n\nIf a social account is not listed here or pinned by admins, do not trust it.

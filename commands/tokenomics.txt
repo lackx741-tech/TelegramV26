@@ -1,0 +1,1 @@
+<b>${PROJECT_NAME} Tokenomics</b>\n\nTotal supply: ${TOKENOMICS.supply}\n• Presale: ${TOKENOMICS.presale}\n• Liquidity: ${TOKENOMICS.liquidity}\n• Community: ${TOKENOMICS.community}\n• Marketing: ${TOKENOMICS.marketing}\n• Ecosystem: ${TOKENOMICS.ecosystem}\n• Team: ${TOKENOMICS.team}\n\nNarrative: ${PROJECT_TAGLINE}

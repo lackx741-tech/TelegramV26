@@ -1,0 +1,1 @@
+<b>${PROJECT_NAME} Contract Status</b>\n\nContract address: ${PRESALE.contract_address}\nNetwork: ${PRESALE.network}\nAudit: ${OFFICIAL_LINKS.audit}\n\nReminder:\n• Only trust the contract address from pinned messages and official announcements\n• Never copy contract addresses from random replies or DMs\n

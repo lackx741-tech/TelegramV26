@@ -1,0 +1,1 @@
+<b>${PROJECT_NAME} Meme Manifesto</b>\n\nWe are not just a chart.\nWe are a timeline event.\n\n${PROJECT_TICKER} runs on:\n• conviction\n• culture\n• inside jokes\n• community raids\n• elite meme stamina\n\nDrop your best memes, tag the squad, and keep it legendary.\n\nUse /hype when you need posting ammo.

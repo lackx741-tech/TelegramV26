@@ -38,12 +38,41 @@ const COMMANDS = {
   aboutlist: LoadCommand('aboutlist', TELEGRAM_CONFIG),
   aboutspoiler: LoadCommand('aboutspoiler', TELEGRAM_CONFIG),
   aboutdelete: LoadCommand('aboutdelete', TELEGRAM_CONFIG),
+  links: LoadCommand('links', TELEGRAM_CONFIG),
+  security: LoadCommand('security', TELEGRAM_CONFIG),
+  whitelist: LoadCommand('whitelist', TELEGRAM_CONFIG),
+  howtobuy: LoadCommand('howtobuy', TELEGRAM_CONFIG),
+  contract: LoadCommand('contract', TELEGRAM_CONFIG),
+  tokenomics: LoadCommand('tokenomics', TELEGRAM_CONFIG),
+  roadmap: LoadCommand('roadmap', TELEGRAM_CONFIG),
+  memes: LoadCommand('memes', TELEGRAM_CONFIG),
+  hype: LoadCommand('hype', TELEGRAM_CONFIG),
+  socials: LoadCommand('socials', TELEGRAM_CONFIG),
+  faq: LoadCommand('faq', TELEGRAM_CONFIG),
   delete: (ctx) => DeleteCommand(ctx),
   spoiler: (ctx) => SpoilerCommand(ctx),
   khaleesi: (ctx) => KhaleesiCommand(ctx),
   chebotarb: (ctx) => ChebotarbCommand(ctx, telegram),
   testcommand: `I'm just a test command that returns string`,
 };
+
+const SCAM_PATTERNS = [
+  /seed phrase/i,
+  /private key/i,
+  /wallet connect/i,
+  /connect wallet/i,
+  /send (me )?(funds|eth|bnb|sol|usdt)/i,
+  /airdrop.*dm/i,
+  /dm me for support/i,
+  /support.*dm/i,
+  /admin.*dm/i,
+  /claim.*here/i,
+  /guaranteed allocation/i,
+  /double your/i,
+];
+
+const SECURITY_WARNING =
+  '⚠️ <b>Security warning</b>\n\n• Admins will never DM you first.\n• Never share your seed phrase or private key.\n• Use only pinned and official links.\n• Never send funds to wallet addresses posted in chat.\n• If unsure, use /security and verify with the pinned message.';
 
 /**
  * @param {import('./types/telegraf').NewMemberContext} ctx
@@ -150,6 +179,20 @@ const HandleTextOrCaptionable = (ctx) => {
 
   if (chat.type === 'private') return;
 
+  if (SCAM_PATTERNS.some((pattern) => pattern.test(text))) {
+    if (!CheckCommandAvailability(from)) return;
+
+    SendingWrapper(() =>
+      ctx.sendMessage(SECURITY_WARNING, {
+        parse_mode: 'HTML',
+        reply_to_message_id: message.message_id,
+        allow_sending_without_reply: true,
+        disable_notification: true,
+      })
+    ).catch(LogMessageOrError);
+    return;
+  }
+
   if (new RegExp(SPECIAL_PHRASE.regexp, 'i').test(text)) {
     if (!CheckCommandAvailability(from)) return;
 
@@ -158,7 +201,7 @@ const HandleTextOrCaptionable = (ctx) => {
 
     if (chance < 1 / 8)
       ctx
-        .sendMessage('<i>…как Орлов, порхай как бабочка!</i>', {
+        .sendMessage('<i>We are so early it still feels illegal.</i>', {
           parse_mode: 'HTML',
           reply_to_message_id: message.message_id,
           allow_sending_without_reply: true,
